@@ -1,0 +1,201 @@
+/* Custom Css */
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap");
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+.carousel {
+  background-color: #fefcf3;
+  background: linear-gradient(rgba(97, 97, 97, 0.2), rgba(88, 88, 88, 0.1)),
+    #fefcf3;
+  color: white;
+}
+
+.carousel-indicators {
+  margin-bottom: 1rem;
+}
+.carousel-control-next,
+.carousel-control-prev {
+  display: none;
+}
+
+.carousel-control-next:hover,
+.carousel-control-prev:hover {
+  opacity: 0.5;
+}
+
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+  background-color: #009eff;
+  border-radius: 100%;
+  filter: brightness(100%);
+  padding: 10px;
+  margin: 10px;
+  width: 30px;
+  height: 30px;
+  opacity: 0.5;
+
+  transition: all 0.2s ease-in-out;
+}
+
+.carousel-control-next-icon:hover,
+.carousel-control-prev-icon:hover {
+  filter: brightness(100%);
+  opacity: 1;
+  transition: all 0.2s ease-in-out;
+}
+
+.carousel-inner {
+  padding: 2rem 1rem;
+  position: relative;
+}
+
+.carousel-inner .row {
+  justify-content: center;
+}
+
+.carousel-item .row {
+  flex-direction: column;
+  align-items: center;
+}
+
+.carousel-indicators [data-bs-target] {
+  width: 10px;
+  height: 5px;
+  border-radius: 11px;
+  background-color: #009eff;
+  opacity: 0.4;
+}
+
+.carousel-indicators [data-bs-target].active {
+  opacity: 1;
+  filter: brightness(110%);
+  background-color: #009eff;
+}
+
+/* Card */
+
+.card {
+  margin: 1.3rem 0;
+  max-width: 80rem;
+  background-color: transparent;
+  border-radius: 30px;
+  border: none;
+
+  transition: all 0.3s ease-in-out;
+}
+
+.card-body .card-title {
+  color: rgb(0, 0, 0);
+  font-size: 24px;
+  font-weight: 700;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+  padding: 0.5rem;
+}
+
+.card-img-top {
+  position: relative;
+  height: 5rem;
+  width: 5rem;
+  border-radius: 100%;
+  object-fit: cover;
+  object-position: center bottom;
+  margin: 1rem auto;
+  border: 4px solid #009eff;
+  transition: all 0.4s ease-in-out;
+}
+
+.card:hover .card-img-top {
+  transform: scale(1.2);
+
+  transition: all 0.4s ease-in-out;
+}
+
+.card-body {
+  text-align: center;
+}
+
+.card .card-text {
+  font-size: 14px;
+  font-weight: 400;
+  color: #000000;
+  font-family: "Playfair Display", serif;
+  max-width: 80%;
+}
+
+.card .card-icon i {
+  font-size: 20px;
+  transform: rotate(180deg);
+  color: #009eff;
+}
+
+.card h6 {
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 600 !important;
+  margin: auto;
+  color: #009eff !important;
+}
+/* Mobile Responsive */
+
+@media (min-width: 300px) {
+  .card {
+    max-width: 30rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .carousel-control-next,
+  .carousel-control-prev {
+    width: 15%;
+    display: block;
+  }
+
+  .carousel-inner {
+    margin: auto;
+    width: 50%;
+  }
+}
+
+@media (min-width: 992px) {
+  .carousel-control-next,
+  .carousel-control-prev {
+    width: 15%;
+    display: block;
+  }
+
+  .carousel-indicators {
+    margin-bottom: 1rem;
+  }
+
+  .carousel-inner {
+    padding: 5rem 1rem;
+  }
+
+  .card-img-top {
+    width: 5rem;
+    height: 5rem;
+  }
+}
+
+@media (min-width: 1090px) {
+  .carousel-item .row {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  .card {
+    margin: 1.3rem 1.3rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .carousel-control-next,
+  .carousel-control-prev {
+    width: 15%;
+  }
+}
